@@ -1,0 +1,31 @@
+.containerHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--WhiteColor);
+  padding-top: 13px;
+  padding-bottom: 13px;
+}
+
+.containerNav {
+  display: flex;
+  gap: 10px;
+}
+
+.link {
+  //   padding: 4px 29px 4px 29px;
+  width: 100px;
+  height: 34px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  line-height: 26px;
+  background-color: var(--PrimaryColor);
+  color: var(--BlackColor);
+  border-radius: 80px;
+}
+
+.link:hover {
+  background-color: var(--HoverColor);
+}
