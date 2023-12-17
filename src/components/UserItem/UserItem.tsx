@@ -33,7 +33,7 @@ const formatPhoneNumber = (originalNumber: string): string => {
 const UserItem: React.FC<UserItemProps> = ({ user }) => {
   return (
     <li className={scss.item}>
-      <img src={user.photo} alt="User's photo" className={scss.photo} />
+      <img src={user.photo} alt="Фото юзера" className={scss.photo} />
       <p className={scss.name}>{user.name}</p>
       <div className={scss.containerText}>
         <p className={scss.text}>{user.position}</p>
