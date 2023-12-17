@@ -15,11 +15,11 @@ export interface User {
 }
 
 export interface ApiResponse {
+  count: number;
   success: boolean;
   page: number;
   total_pages: number;
   total_users: number;
-  count: number;
   links: Link;
   users: User[];
 }
@@ -38,5 +38,5 @@ export interface Users {
     count: number;
     links: Link;
     users: User[];
-  }[];
+  };
 }

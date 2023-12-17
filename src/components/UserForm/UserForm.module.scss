@@ -1,0 +1,196 @@
+// .iputWrapper {
+//   display: flex;
+//   flex-direction: column;
+//   gap: 50px;
+// }
+
+// .input {
+//   border: 1px solid var(--BorderColor);
+//   width: 328px;
+//   height: 54px;
+//   padding: 14px 0 14px 16px;
+//   border-radius: 4px;
+//   color: var(BlackColor);
+//   background-color: var(--BackgroundColor);
+// }
+
+// .input:hover {
+//   border-color: var(--BorderColor);
+//   outline: none;
+// }
+
+// input:focus {
+//   border-color: var(--BorderColor);
+//   outline: none;
+// }
+
+// input::placeholder {
+//   color: var(--PlaceholderColor);
+//   font-size: 16px;
+//   line-height: 26px;
+// }
+
+// .error {
+//   color: var(--ErrorColor);
+//   font-size: 12px;
+//   line-height: 14px;
+//   margin-top: 4px;
+//   margin-left: 16px;
+// }
+
+// .inputError {
+//   border-color: var(--BorderColor);
+// }
+
+// .inputSuccess {
+//   background-color: var(--BackgroundColor);
+// }
+
+// .inputSuccess::before {
+//   content: "sdfffdsfsdfdsfdsfdsfsdfds";
+
+//   border: 2px solid green;
+//   box-sizing: border-box;
+//   pointer-events: none;
+// }
+
+// .conrainerInput {
+//   position: relative;
+// }
+
+// .label {
+//   position: absolute;
+//   left: 10px;
+//   top: -9px;
+//   background-color: var(--BackgroundColor);
+//   padding-left: 2px;
+//   padding-right: 2px;
+// }
+
+// .radio {
+//   visibility: hidden;
+//   width: 1px;
+//   height: 1px;
+// }
+
+// .customRadio {
+//   border: 1px solid var(--BorderColor);
+//   border-radius: 50%;
+//   width: 20px;
+//   height: 20px;
+//   position: relative;
+//   margin-right: 12px;
+// }
+
+// .containerRadio {
+//   align-items: center;
+//   display: flex;
+//   font-size: 16px;
+//   line-height: 26px;
+//   color: var(--BlackColor);
+// }
+
+// .radio:checked + .customRadio {
+//   border-color: var(--SecondaryColor);
+//   padding: 2px;
+// }
+
+// .radio:checked + .customRadio::before {
+//   content: "";
+//   position: absolute;
+//   width: 10px;
+//   height: 10px;
+//   background-color: var(--SecondaryColor);
+//   border-radius: 50%;
+//   top: 50%;
+//   left: 50%;
+//   transform: translate(-50%, -50%);
+// }
+
+// .example {
+//   font-size: 12px;
+//   line-height: 14px;
+//   color: var(--ExampleColor);
+//   margin-top: 4px;
+//   margin-left: 16px;
+// }
+
+// .title {
+//   font-size: 16px;
+//   line-height: 26px;
+//   color: var(--BlackColor);
+//   margin-top: 25px;
+//   margin-bottom: 11px;
+// }
+
+// .inputPhoto {
+//   border: 1px solid black;
+//   height: 83px;
+//   position: relative;
+//   overflow: hidden;
+//   position: absolute;
+//   opacity: 0;
+//   top: 0;
+//   left: 0;
+//   cursor: pointer;
+// }
+
+// .inputPhoto label {
+//   display: block;
+//   background-color: #3498db;
+//   color: #fff;
+//   padding: 8px 12px;
+//   border-radius: 4px;
+//   cursor: pointer;
+// }
+
+// .inputPhoto label::after {
+//   content: "Upload your photo";
+// }
+
+//
+.inputPhoto {
+  position: relative;
+  overflow: hidden;
+}
+
+.inputPhoto input {
+  position: absolute;
+  font-size: 100px;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+}
+
+.inputPhoto label {
+  display: block;
+  background-color: #3498db;
+  color: #fff;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.inputPhoto label::after {
+  content: "Выберите файл";
+}
+
+.inputPhoto input:hover + label,
+.inputPhoto input:focus + label {
+  background-color: #2980b9;
+}
+
+.inputPhoto input:valid + label {
+  background-color: #2ecc71;
+}
+
+.inputPhoto input:valid + label::after {
+  content: "Файл выбран: " attr(data-file-name);
+}
+
+.error {
+  color: red;
+  font-size: 12px;
+  margin-top: 4px;
+}

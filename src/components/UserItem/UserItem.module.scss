@@ -1,0 +1,43 @@
+.item {
+  width: 328px;
+  height: 254px;
+  background-color: var(--WhiteColor);
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 20px;
+}
+
+.photo {
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+.name {
+  max-width: 100%;
+  font-size: 16px;
+  line-height: 26px;
+  color: var(--BlackColor);
+  text-align: center;
+  margin-bottom: 20px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.containerText {
+  max-width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.text {
+  font-size: 16px;
+  line-height: 26px;
+  text-align: center;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}

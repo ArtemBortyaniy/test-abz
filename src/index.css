@@ -54,7 +54,11 @@ code {
   --DisabledColor: #b4b4b4;
   --WhiteColor: #ffffff;
   --BlackColor: #000000;
-  --Secondary: #00bdd3;
+  --SecondaryColor: #00bdd3;
+  --PlaceholderColor: #501e1e;
+  --BorderColor: #d0cfcf;
+  --ErrorColor: #cb3d40;
+  --ExampleColor: #7e7e7e;
 }
 
 .container {
