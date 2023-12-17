@@ -5,7 +5,7 @@ import scss from "./RegistrationSuccessMessage.module.scss";
 const RegistrationSuccessMessage: FC = () => {
   return (
     <div className={scss.imgContainer}>
-      <img src={img} alt="success image" />
+      <img src={img} alt="Успех регистрации" />
     </div>
   );
 };

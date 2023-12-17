@@ -13,8 +13,8 @@ const UserFormSchema = Yup.object().shape({
   phone: Yup.string()
     .required("User phone number is required")
     .matches(
-      /^[\+]{0,1}380([0-9]{9})$/,
-      "Invalid phone format. Number should start with code of Ukraine +380"
+      /^[+]?380([0-9]{9})$/,
+      "Invalid phone format. Number should start with the code of Ukraine +380"
     ),
   position_id: Yup.number()
     .required("User's position ID is required")
