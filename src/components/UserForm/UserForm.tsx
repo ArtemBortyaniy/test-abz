@@ -1,12 +1,17 @@
 import React, { useState } from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
+//type
+import { FormValues } from "./FormValues";
+//schema
+import UserFormSchema from "./UserFormSchema";
+//redux
+import { getUsers } from "../../redux/users/operations";
+import { usePosition } from "../../hooks";
+import { createUser } from "../../redux/users/operations";
 import { ThunkDispatch } from "redux-thunk";
 import { Action } from "@reduxjs/toolkit";
 import { useDispatch } from "react-redux";
-import UserFormSchema from "./UserFormSchema";
-import { FormValues } from "./FormValues";
-import { usePosition } from "../../hooks";
-import { createUser } from "../../redux/users/operations";
+//style
 import scss from "./UserForm.module.scss";
 
 const UserForm = () => {
@@ -30,16 +35,25 @@ const UserForm = () => {
     { resetForm }: { resetForm: () => void }
   ) {
     console.log(values);
-    const formData = new FormData();
-    formData.append("email", "adsadsads@gmail.com");
-    formData.append("name", "dadsdasd");
-    formData.append("phone", "+380934530615");
-    formData.append("photo", "C:\\fakepath\\Ellipse 2.jpg");
-    formData.append("position_id", "3");
+    // const formData = new FormData();
+    // formData.append("email", "adsadsads@gmail.com");
+    // formData.append("name", "dadsdasd");
+    // formData.append("phone", "+380934530615");
+    // formData.append("photo", "C:\\fakepath\\Ellipse 2.jpg");
+    // formData.append("position_id", "3");
 
-    dispatch(createUser(formData));
+    dispatch(createUser(values));
+    dispatch(getUsers({ page: 1, count: 6 }));
     // resetForm();
   }
+
+  const handleFileChange = (event: any) => {
+    const fileName = event.target.files[0]?.name;
+    const label = document.querySelector(`label[for="fileInput"]`);
+    if (label) {
+      label.textContent = fileName;
+    }
+  };
 
   return (
     <Formik
@@ -47,8 +61,8 @@ const UserForm = () => {
       onSubmit={handleSubmit}
       validationSchema={UserFormSchema}
     >
-      {({ errors, touched }) => (
-        <Form>
+      {({ errors, touched, isValid }) => (
+        <Form className={scss.form}>
           <div className={scss.iputWrapper}>
             <div className={scss.conrainerInput}>
               {isVisibleName && <label className={scss.label}>Name</label>}
@@ -122,7 +136,7 @@ const UserForm = () => {
             </div>
           </div>
 
-          <div>
+          <div className={scss.wrapperRadio}>
             <label className={scss.title}>Select your position</label>
             {position.positions?.map((position: any) => (
               <div key={position.id}>
@@ -145,34 +159,36 @@ const UserForm = () => {
               </div>
             ))}
             <ErrorMessage
-              name="position"
+              name="position_id"
               component="div"
               className={scss.error}
             />
           </div>
           <div className={scss.inputPhoto}>
-            <Field
-              type="file"
-              name="photo"
-              id="fileInput" // привязываем id для связи с label
-              className={scss.input}
-            />
-            <label htmlFor="fileInput"></label>
-            <ErrorMessage component="div" name="file" className={scss.error} />
-          </div>
-          {/* <div>
+            <div className={scss.box}>Upload</div>
             <Field
               type="file"
               name="photo"
               id="fileInput"
-              className={scss.inputPhoto}
+              className={scss.input}
+              onInput={handleFileChange}
             />
-            <label htmlFor="fileInput"></label>
+            <div className={scss.box1}></div>
+            <label htmlFor="fileInput" className={scss.labelFile}>
+              Upload your photo
+            </label>
+            <ErrorMessage component="div" name="photo" className={scss.error} />
+          </div>
 
-            <ErrorMessage component="div" name="file" className={scss.error} />
-          </div> */}
-
-          <button type="submit">Submit</button>
+          <div className={scss.wrapperBtn}>
+            <button
+              type="submit"
+              className={scss.btnSubmit}
+              disabled={!isValid}
+            >
+              Submit
+            </button>
+          </div>
         </Form>
       )}
     </Formik>

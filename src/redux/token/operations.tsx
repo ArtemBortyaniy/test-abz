@@ -1,12 +1,8 @@
 import axios from "axios";
 import { createAsyncThunk } from "@reduxjs/toolkit";
 
-const setAuthHeader = (token) => {
+const setAuthHeader = (token: string) => {
   axios.defaults.headers.Token = `${token}`;
-};
-
-const clearAuthHeader = () => {
-  axios.defaults.headers.common.Authorization = "";
 };
 
 export const getToken = createAsyncThunk(
@@ -16,7 +12,7 @@ export const getToken = createAsyncThunk(
       const res = await axios.get("/token");
       setAuthHeader(res.data.token);
       return res.data;
-    } catch (error) {
+    } catch (error: any) {
       return thunkAPI.rejectWithValue(error.message);
     }
   }

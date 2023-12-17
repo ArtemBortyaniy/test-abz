@@ -1,196 +1,251 @@
-// .iputWrapper {
-//   display: flex;
-//   flex-direction: column;
-//   gap: 50px;
-// }
+.iputWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
 
-// .input {
-//   border: 1px solid var(--BorderColor);
-//   width: 328px;
-//   height: 54px;
-//   padding: 14px 0 14px 16px;
-//   border-radius: 4px;
-//   color: var(BlackColor);
-//   background-color: var(--BackgroundColor);
-// }
+@media screen and (min-width: 768px) {
+  .form {
+    width: 380px;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+  }
+}
 
-// .input:hover {
-//   border-color: var(--BorderColor);
-//   outline: none;
-// }
+.input {
+  border: 1px solid var(--BorderColor);
+  width: 328px;
+  height: 54px;
+  padding: 14px 0 14px 16px;
+  border-radius: 4px;
+  color: var(BlackColor);
+  background-color: var(--BackgroundColor);
+}
 
-// input:focus {
-//   border-color: var(--BorderColor);
-//   outline: none;
-// }
+@media screen and (min-width: 768px) {
+  .input {
+    width: 380px;
+  }
+}
 
-// input::placeholder {
-//   color: var(--PlaceholderColor);
-//   font-size: 16px;
-//   line-height: 26px;
-// }
+.input:hover {
+  border-color: var(--BorderColor);
+  outline: none;
+}
 
-// .error {
-//   color: var(--ErrorColor);
-//   font-size: 12px;
-//   line-height: 14px;
-//   margin-top: 4px;
-//   margin-left: 16px;
-// }
+input:focus {
+  border-color: var(--BorderColor);
+  outline: none;
+}
 
-// .inputError {
-//   border-color: var(--BorderColor);
-// }
+input::placeholder {
+  color: var(--PlaceholderColor);
+  font-size: 16px;
+  line-height: 26px;
+}
 
-// .inputSuccess {
-//   background-color: var(--BackgroundColor);
-// }
+.error {
+  color: var(--ErrorColor);
+  font-size: 12px;
+  line-height: 14px;
+  margin-top: 4px;
+  margin-left: 16px;
+}
 
-// .inputSuccess::before {
-//   content: "sdfffdsfsdfdsfdsfdsfsdfds";
+.inputError {
+  border-color: var(--ErrorColor);
+}
 
-//   border: 2px solid green;
-//   box-sizing: border-box;
-//   pointer-events: none;
-// }
+.inputSuccess {
+  background-color: var(--BackgroundColor);
+}
 
-// .conrainerInput {
-//   position: relative;
-// }
+.inputSuccess::before {
+  content: "sdfffdsfsdfdsfdsfdsfsdfds";
 
-// .label {
-//   position: absolute;
-//   left: 10px;
-//   top: -9px;
-//   background-color: var(--BackgroundColor);
-//   padding-left: 2px;
-//   padding-right: 2px;
-// }
+  border: 2px solid green;
+  box-sizing: border-box;
+  pointer-events: none;
+}
 
-// .radio {
-//   visibility: hidden;
-//   width: 1px;
-//   height: 1px;
-// }
+.conrainerInput {
+  position: relative;
+}
 
-// .customRadio {
-//   border: 1px solid var(--BorderColor);
-//   border-radius: 50%;
-//   width: 20px;
-//   height: 20px;
-//   position: relative;
-//   margin-right: 12px;
-// }
+.label {
+  position: absolute;
+  left: 10px;
+  top: -8 px;
+  background-color: var(--BackgroundColor);
+  padding-left: 2px;
+  padding-right: 2px;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 14px;
+}
 
-// .containerRadio {
-//   align-items: center;
-//   display: flex;
-//   font-size: 16px;
-//   line-height: 26px;
-//   color: var(--BlackColor);
-// }
+.radio {
+  visibility: hidden;
+  width: 1px;
+  height: 1px;
+}
 
-// .radio:checked + .customRadio {
-//   border-color: var(--SecondaryColor);
-//   padding: 2px;
-// }
+.customRadio {
+  border: 1px solid var(--BorderColor);
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  position: relative;
+  margin-right: 12px;
+}
 
-// .radio:checked + .customRadio::before {
-//   content: "";
-//   position: absolute;
-//   width: 10px;
-//   height: 10px;
-//   background-color: var(--SecondaryColor);
-//   border-radius: 50%;
-//   top: 50%;
-//   left: 50%;
-//   transform: translate(-50%, -50%);
-// }
+.containerRadio {
+  align-items: center;
+  display: flex;
+  font-size: 16px;
+  line-height: 26px;
+  color: var(--BlackColor);
+}
 
-// .example {
-//   font-size: 12px;
-//   line-height: 14px;
-//   color: var(--ExampleColor);
-//   margin-top: 4px;
-//   margin-left: 16px;
-// }
+.radio:checked + .customRadio {
+  border-color: var(--SecondaryColor);
+  padding: 2px;
+}
 
-// .title {
-//   font-size: 16px;
-//   line-height: 26px;
-//   color: var(--BlackColor);
-//   margin-top: 25px;
-//   margin-bottom: 11px;
-// }
+.radio:checked + .customRadio::before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: var(--SecondaryColor);
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 
-// .inputPhoto {
-//   border: 1px solid black;
-//   height: 83px;
-//   position: relative;
-//   overflow: hidden;
-//   position: absolute;
-//   opacity: 0;
-//   top: 0;
-//   left: 0;
-//   cursor: pointer;
-// }
+.example {
+  font-size: 12px;
+  line-height: 14px;
+  color: var(--ExampleColor);
+  margin-top: 4px;
+  margin-left: 16px;
+}
 
-// .inputPhoto label {
-//   display: block;
-//   background-color: #3498db;
-//   color: #fff;
-//   padding: 8px 12px;
-//   border-radius: 4px;
-//   cursor: pointer;
-// }
+.title {
+  font-size: 16px;
+  line-height: 26px;
+  color: var(--BlackColor);
+  margin-bottom: 11px;
+}
 
-// .inputPhoto label::after {
-//   content: "Upload your photo";
-// }
-
+.wrapperRadio {
+  margin-top: 25px;
+}
 //
 .inputPhoto {
   position: relative;
   overflow: hidden;
+  margin-top: 47px;
 }
 
 .inputPhoto input {
   position: absolute;
-  font-size: 100px;
   opacity: 0;
   top: 0;
   left: 0;
   cursor: pointer;
+  width: 83px;
+  height: 53px;
 }
 
 .inputPhoto label {
-  display: block;
-  background-color: #3498db;
-  color: #fff;
-  padding: 8px 12px;
   border-radius: 4px;
   cursor: pointer;
+  padding-left: 100px;
+  height: 54px;
 }
 
 .inputPhoto label::after {
-  content: "Выберите файл";
-}
-
-.inputPhoto input:hover + label,
-.inputPhoto input:focus + label {
-  background-color: #2980b9;
-}
-
-.inputPhoto input:valid + label {
-  background-color: #2ecc71;
-}
-
-.inputPhoto input:valid + label::after {
-  content: "Файл выбран: " attr(data-file-name);
+  height: 54px;
 }
 
 .error {
   color: red;
   font-size: 12px;
   margin-top: 4px;
+}
+
+.box {
+  position: absolute;
+  width: 83px;
+  height: 54px;
+
+  border: 1px solid var(--BlackColor);
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 16px;
+  line-height: 26px;
+}
+
+.box1 {
+  position: absolute;
+  right: 0;
+  width: 245px;
+  height: 54px;
+  border-left: none;
+  border: 1px solid var(--BorderColor);
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+@media screen and (min-width: 768px) {
+  .box1 {
+    width: 297px;
+  }
+}
+
+.labelFile {
+  padding-left: 99px;
+  font-size: 16px;
+  line-height: 26px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  color: var(--ExampleColor);
+}
+
+.btnSubmit {
+  font-size: 16px;
+  line-height: 26px;
+  border: none;
+  color: var(--BlackColor);
+  background-color: var(--PrimaryColor);
+  border-radius: 80px;
+  width: 100px;
+  height: 34px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btnSubmit:hover {
+  background-color: var(--HoverColor);
+}
+
+.btnSubmit:disabled {
+  background-color: var(--DisabledColor);
+  color: var(WtiheColor);
+}
+
+.wrapperBtn {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
 }

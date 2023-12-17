@@ -7,7 +7,7 @@ export const getPositions = createAsyncThunk(
     try {
       const res = await axios.get("positions");
       return res.data;
-    } catch (error) {
+    } catch (error: any) {
       return thunkAPI.rejectWithValue(error.message);
     }
   }

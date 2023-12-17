@@ -12,9 +12,9 @@ const Hero: FC = () => {
         mind. They should also be excited to learn, as the world of Front-End
         Development keeps evolving.
       </p>
-      <button type="button" className={scss.signUp}>
+      <a href="#signup" className={scss.signUp}>
         Sign up
-      </button>
+      </a>
     </div>
   );
 };

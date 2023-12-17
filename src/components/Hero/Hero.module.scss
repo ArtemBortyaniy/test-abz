@@ -5,6 +5,30 @@
   background-image: url("../../img/heroMobile.jpg");
 }
 
+@media screen and (min-width: 768px) {
+  .containerHero {
+    width: 768px;
+    padding: 89px 194px 88px 194px;
+    background-image: url("../../img/heroTablet.jpg");
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .containerHero {
+    width: 1024px;
+    padding: 164px 322px 163px 322px;
+    background-image: url("../../img/heroLaptop.jpg");
+  }
+}
+
+@media screen and (min-width: 1170px) {
+  .containerHero {
+    width: 1170px;
+    padding: 164px 395px 163px 395px;
+    background-image: url("../../img/heroDesk.jpg");
+  }
+}
+
 .title {
   font-size: 40px;
   line-height: 40px;
