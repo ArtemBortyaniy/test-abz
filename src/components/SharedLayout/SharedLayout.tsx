@@ -2,6 +2,7 @@ import React, { FC } from "react";
 import { Suspense } from "react";
 import { Outlet } from "react-router-dom";
 import Navigation from "../Navigation/Navigation";
+import Loader from "../Loader/Loader";
 
 const SharedLayout: FC = () => {
   return (
@@ -10,7 +11,7 @@ const SharedLayout: FC = () => {
         <Navigation />
       </header>
       <main>
-        <Suspense fallback={"Loading..."}>
+        <Suspense fallback={<Loader />}>
           <Outlet />
         </Suspense>
       </main>
